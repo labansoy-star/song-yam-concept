@@ -285,7 +285,11 @@
     document.querySelectorAll('[data-modelabel]').forEach(e => { e.textContent = state.mode === 'day' ? 'โหมดเช้า 07:00–11:00' : 'โหมดค่ำ 17:00–23:00'; });
   }
   document.addEventListener('click', e => { const b = e.target.closest('.mode button'); if (!b) return; state.mode = b.dataset.set; render(); });
+  const q = new URLSearchParams(location.search);
+  if (q.get('mode') === 'night') state.mode = 'night';
   render();
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
 })();
 </script>
 </body>
