@@ -152,7 +152,7 @@
       [[0.9, 3.1], [3.6, 5.8]].forEach(([a, b]) => { g += R(a, 0.72, b - a, 0.05, { fill: C.woodL, stroke: p.line, 'stroke-width': 0.6 }) + R(a + 0.1, 0, 0.05, 0.72, { fill: p.line }) + R(b - 0.15, 0, 0.05, 0.72, { fill: p.line }); });
       [1.27, 2.0, 2.73, 3.97, 4.7, 5.43].forEach(x => { g += R(x - 0.15, 0.42, 0.3, 0.05, { fill: C.wood }) + R(x - 0.12, 0, 0.03, 0.42, { fill: p.line }) + R(x + 0.09, 0, 0.03, 0.42, { fill: p.line }); });
       g += person(k, p, 1.27, 1.6, 'sit', 1) + person(k, p, 2.73, 1.6, 'sit', -1) + person(k, p, 5.43, 1.6, 'sit', -1) + person(k, p, 6.25, 1.64, 'stand');
-      g += T(1.3, 1.9, 'โต๊ะยาวหมู่ +0.75', { fill: p.text }) + T(6.62, 1.6, 'เคาน์เตอร์ +1.05', { fill: p.text });
+      g += T(0.15, 2.12, 'โต๊ะยาวหมู่ +0.75', { fill: p.text }) + L(1.0, 2.05, 1.0, 0.8, { stroke: p.soft, 'stroke-width': 0.6 }) + T(6.62, 1.82, 'เคาน์เตอร์ +1.05', { fill: p.text });
     } else {
       SY.screens.forEach(([a, , b]) => {
         g += R(a, 0, b - a, 2.0, { fill: 'none', stroke: '#8C6A48', 'stroke-width': 1.4 });
@@ -167,7 +167,7 @@
       g += T(0.05, 1.45, 'รถเข็นหมาล่า', { fill: p.text }) + T(4.9, 2.1, 'ฉากไม้ฉลุ', { fill: p.text });
     }
     g += T(6.05, 2.02, 'ใต้โคม +2.40', { fill: night ? C.lantern : C.seal, 'font-family': 'IBM Plex Mono, monospace', 'font-size': 10.5 });
-    g += T(7.2, 3.02, 'ท่อดูดควัน → ช่องระแนง', { fill: p.text, 'font-size': 10.5 });
+    g += T(7.05, 2.98, 'ท่อดูดควัน', { fill: p.text, 'font-size': 10.5 });
     g += L(-1.1, 0, W + 1.1, 0, { stroke: p.line, 'stroke-width': 1.2 });
     g += levels(k, p, -0.55, [[0, '±0.00'], [0.75, '+0.75'], [2.4, '+2.40'], [EAVE, '+3.07'], [RIDGE, '+4.30*']]);
     g += dims(k, p, [0, 6.6, W], -0.55, ['6.60 ที่นั่ง', '2.30 ครัว']);

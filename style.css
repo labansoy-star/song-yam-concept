@@ -127,12 +127,12 @@ button{font:inherit;color:inherit}
 .clock-legend i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:-1px;border:1px solid var(--ink)}
 
 /* phasing */
-.phase{display:grid;grid-template-columns:150px repeat(7,1fr);font-size:12.5px;border-top:1.5px solid var(--ink)}
-.phase>div{padding:7px 6px;border-bottom:1px solid var(--hair)}
+.phase{display:grid;grid-template-columns:210px repeat(7,1fr);font-size:13px;border-top:1.5px solid var(--ink)}
+.phase>div{padding:8px 6px;border-bottom:1px solid var(--hair);border-left:1px solid var(--hair)}
+.phase>div:nth-child(8n+1){border-left:none;padding-left:0}
 .phase .ph-h{font-family:var(--f-mono);font-size:10.5px;color:var(--graphite);text-align:center}
-.phase .bar{background:var(--ink);height:10px;align-self:center;padding:0;border:none;margin:0 1px;border-radius:1px}
-.phase .bar.red{background:var(--seal)}
-.phase .gap{border-bottom:1px solid var(--hair)}
+.phase .bar{background:linear-gradient(var(--ink),var(--ink)) center/100% 10px no-repeat}
+.phase .bar.red{background:linear-gradient(var(--seal),var(--seal)) center/100% 10px no-repeat}
 .phase-wrap{overflow-x:auto}.phase-wrap .phase{min-width:640px}
 
 .foot{max-width:1320px;margin:0 auto;padding:0 24px 50px;font-family:var(--f-mono);font-size:11.5px;color:var(--graphite);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
